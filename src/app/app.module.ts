@@ -6,13 +6,17 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServiceBookingComponent } from './service-booking/service-booking.component';
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { AvailableHotelsComponent } from './BookingHotels/available-hotels/available-hotels.component';
+import { RegisterHotelsComponent } from './BookingHotels/register-hotels/register-hotels.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ServiceBookingComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    AvailableHotelsComponent,
+    RegisterHotelsComponent
   ],
   imports: [
     BrowserModule,
