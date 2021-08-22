@@ -1,1 +1,16 @@
-<p>available-hotels works!</p>
+<div class="container-fluid">
+<h4>Available hotels and villas for your booking</h4>
+</div>
+
+<div class="container row">
+    <div class="card col-md-4" style="width: 18rem;" *ngFor="let hotel of hotels" class="">
+        <img class="card-img-top" [src]="hotel.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{hotel.title}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</div>
+   
+
