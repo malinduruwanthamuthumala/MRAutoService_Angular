@@ -2,8 +2,10 @@
 <h4>Available hotels and villas for your booking</h4>
 </div>
 
-<div class="container row">
-    <div class="card col-md-4" style="width: 18rem;" *ngFor="let hotel of hotels" class="">
+<div class="container">
+<div class="row">
+    <div  *ngFor="let hotel of hotels" class="col-md-4">
+      <div class="card">
         <img class="card-img-top" [src]="hotel.image" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{hotel.title}}</h5>
@@ -11,6 +13,8 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+    </div>
+</div>
 </div>
    
 
