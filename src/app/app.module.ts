@@ -8,6 +8,7 @@ import { ServiceBookingComponent } from './service-booking/service-booking.compo
 import { UserRegistrationComponent } from './user-registration/user-registration.component';
 import { AvailableHotelsComponent } from './BookingHotels/available-hotels/available-hotels.component';
 import { RegisterHotelsComponent } from './BookingHotels/register-hotels/register-hotels.component';
+import { HotelCardComponent } from './BookingHotels/UI/hotel-card/hotel-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RegisterHotelsComponent } from './BookingHotels/register-hotels/registe
     ServiceBookingComponent,
     UserRegistrationComponent,
     AvailableHotelsComponent,
-    RegisterHotelsComponent
+    RegisterHotelsComponent,
+    HotelCardComponent
   ],
   imports: [
     BrowserModule,
