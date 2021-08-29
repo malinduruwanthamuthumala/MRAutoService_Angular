@@ -5,7 +5,26 @@
 <div class="container">
 <div class="row">
     <div  *ngFor="let hotel of hotels" class="col-md-4">
-      <app-hotel-card [hotel] ="hotel"></app-hotel-card >
+      parent:{{parentData}}
+      <app-hotel-card 
+      [hotel] ="hotel"
+      [(childData)]="parentData"
+      
+         
+      >
+    </app-hotel-card >
+
+
+   <!--
+
+    <app-hotel-card 
+      [hotel] ="hotel"
+      [childData]="parentData"
+      (childDataChange)="changeParentData($event)" 
+         
+      >
+    </app-hotel-card >
+   --> 
     </div>
 </div>
 </div>

@@ -10,6 +10,7 @@ import { HotelService } from '../../shared/hotel.service';
 export class AvailableHotelsComponent implements OnInit {
 
   hotels:Hotel[] = [] ;
+  parentData=10;
   constructor(private hotelService:HotelService) { 
 
   }
@@ -20,6 +21,8 @@ export class AvailableHotelsComponent implements OnInit {
         this.hotels = hotels; 
     })
   }
+
+ 
 
   
 

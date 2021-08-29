@@ -56,7 +56,7 @@ export class HotelService {
     return new Observable((observer)=>{
       setTimeout(()=>{
         observer.next(this.hotels);
-      },2000)
+      },0)
     });
     
     

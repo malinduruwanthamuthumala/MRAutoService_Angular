@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit ,Output,EventEmitter } from '@angular/core';
 import { Hotel } from '../../hotel.model';
 
 @Component({
@@ -14,5 +14,12 @@ export class HotelCardComponent implements OnInit {
   }
 
   @Input() hotel!: Hotel;
+  @Input() childData!: number;
+  @Output() childDataChange = new EventEmitter();
+
+  changeData = ()=>{
+    this.childData = 100;
+    this.childDataChange.emit(this.childData);
+  }
 
 }
