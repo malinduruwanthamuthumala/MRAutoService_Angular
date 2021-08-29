@@ -61,4 +61,18 @@ export class HotelService {
     
     
   }
+
+  public getHotelById(id:String):Observable<Hotel>{
+   return new Observable(observer=>{
+     
+    const hotel = this.hotels.find(hotel=> hotel._id === id)
+    setTimeout(()=>{
+       observer.next(hotel);
+     }
+     ,300);
+
+     
+   })
+  
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  Router, ActivatedRoute, ParamMap  } from '@angular/router';
+import { Hotel } from '../hotel.model';
+import { HotelService } from '../../shared/hotel.service';
 
 @Component({
   selector: 'app-hotel-detail',
@@ -8,7 +10,13 @@ import {  Router, ActivatedRoute, ParamMap  } from '@angular/router';
 })
 export class HotelDetailComponent implements OnInit {
   public hotelID = "";
-  constructor(private  route:ActivatedRoute) {
+  hotels:Hotel[] = [];
+  featuredHotel!: Hotel;
+
+  constructor(
+    private  route:ActivatedRoute,
+    private hotelService:HotelService
+    ) {
 
    }
   
@@ -16,7 +24,17 @@ export class HotelDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params)=>{
       this.hotelID = params['hotelID']
-    })
+    });
+
+    
+
+    this.hotelService.getHotelById(this.hotelID).subscribe(
+      (hotel:Hotel) =>{
+        this.featuredHotel = hotel;
+      }
+    )
+
+
   }
 
 }

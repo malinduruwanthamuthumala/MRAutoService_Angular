@@ -1,1 +1,12 @@
-<p>hotel-detail works! {{hotelID}}</p>
+
+<div class="container">
+    <div class="card">
+        <img class="card-img-top" [src]="featuredHotel.image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{featuredHotel.title}}</h5>
+          <h6 class="card-subtitle type-{{featuredHotel.category}}" >category:{{featuredHotel.category}}</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p>only {{featuredHotel.dailyPrice}} per night</p>
+        </div>
+      </div>
+</div>
