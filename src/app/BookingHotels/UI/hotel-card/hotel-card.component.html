@@ -2,6 +2,7 @@
     <img class="card-img-top" [src]="hotel.image" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{hotel.title}}</h5>
+      <h6 class="card-subtitle type-{{hotel.category}}" >category:{{hotel.category}}</h6>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <p>only {{hotel.dailyPrice}} per night</p>
       <p>child:{{childData}}</p>
