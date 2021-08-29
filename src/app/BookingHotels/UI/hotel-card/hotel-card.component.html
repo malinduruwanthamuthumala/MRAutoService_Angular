@@ -1,3 +1,4 @@
+
 <div class="card">
     <img class="card-img-top" [src]="hotel.image" alt="Card image cap">
     <div class="card-body">
@@ -6,6 +7,6 @@
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <p>only {{hotel.dailyPrice}} per night</p>
       <p>child:{{childData}}</p>
-      <button (click)="changeData()" class="btn btn-primary">Go somewhere</button>
+      <a href="/hotelList/{{hotel._id}}"> <button  class="btn btn-primary">Go somewhere</button></a>
     </div>
   </div>
