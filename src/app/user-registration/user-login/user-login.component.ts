@@ -19,8 +19,18 @@ export class UserLoginComponent implements OnInit {
 
 
   register(form:NgForm){
-    
+    this.validate(form);
+    if(form.invalid){
+      return;
+    }
     alert(JSON.stringify(this.User))
+  }
+
+  validate(form:NgForm){
+    debugger
+    Object.keys(form.controls).forEach(element => {
+      form.controls[element].markAsDirty();
+    });
   }
 
   get userDetails():String {
