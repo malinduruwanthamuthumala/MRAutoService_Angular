@@ -4,9 +4,10 @@
     <h3 style="padding:10px">User Login</h3>
       <!-- Login Form -->
       <form style="padding-top:50px">
-        <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="login" [(ngModel)]="User.username" #username="ngModel" required >
+        <div class="alert alert-danger fadeIn second" role="alert" *ngIf="username.errors?.required">user name required</div>
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="User.password">
+        <input type="submit" class="fadeIn fourth" value="Log In" (click)="register()">
       </form>
   
       <!-- Remind Passowrd -->
@@ -14,5 +15,6 @@
         <a class="underlineHover" href="#">Forgot Password?</a>
       </div>
   
+      {{userDetails}}
     </div>
   </div>

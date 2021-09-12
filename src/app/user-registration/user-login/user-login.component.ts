@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserLoginComponent implements OnInit {
 
+  User:any={
+    username:"",
+    password:""
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
+  register(){
+    alert(JSON.stringify(this.User))
+  }
+
+  get userDetails():String {
+    return JSON.stringify(this.User);
+  }
+
+  
 
 }
