@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-user-login',
@@ -17,7 +18,8 @@ export class UserLoginComponent implements OnInit {
   }
 
 
-  register(){
+  register(form:NgForm){
+    
     alert(JSON.stringify(this.User))
   }
 
