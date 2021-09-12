@@ -10,6 +10,12 @@ import { AvailableHotelsComponent } from './BookingHotels/available-hotels/avail
 import { RegisterHotelsComponent } from './BookingHotels/register-hotels/register-hotels.component';
 import { HotelCardComponent } from './BookingHotels/UI/hotel-card/hotel-card.component';
 import { HotelDetailComponent } from './BookingHotels/hotel-detail/hotel-detail.component';
+import { FormsModule } from '@angular/forms';
+
+
+import {uppercase} from './shared/pipes/uppercase';
+import { UserLoginComponent } from './user-registration/user-login/user-login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,15 @@ import { HotelDetailComponent } from './BookingHotels/hotel-detail/hotel-detail.
     AvailableHotelsComponent,
     RegisterHotelsComponent,
     HotelCardComponent,
-    HotelDetailComponent
+    HotelDetailComponent,
+    uppercase,
+    UserLoginComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

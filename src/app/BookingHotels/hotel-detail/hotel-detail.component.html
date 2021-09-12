@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" *ngIf="featuredHotel && hotelID">
     <div class="card">
         <img class="card-img-top" [src]="featuredHotel.image" alt="Card image cap">
         <div class="card-body">
